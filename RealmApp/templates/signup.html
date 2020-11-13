@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    <!-- Meta Tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <meta name="description" content="150 words">
+    <meta name="author" content="uipasta">
+    <meta name="url" content="http://www.yourdomainname.com">
+    <meta name="copyright" content="company name">
+    <meta name="robots" content="index,follow">
+
+    <title>Realm Log-In or Sign-Up</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+
+    <!-- All CSS Plugins -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/plugin.css' %}">
+
+    <!-- Main CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+    <!-- Google Web Fonts  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+
+    <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      .side-step-img {
+    width: 85%;
+    height: 60%;
+}
+.side-step {
+    padding: 20px;
+    height: 60%;
+    width: 43%;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.sign-up-login {
+    margin-left: 560px;
+    margin-top: -390px;
+    margin-bottom: 30px;
+    padding: 40px;
+    border: 1px solid grey;
+    width: 40%;
+    height: 450px;
+    text-align: center;
+}
+.footer {
+    padding: 20px;
+    margin-left: 20px;
+}
+    </style>
+  </head>
+<body>
+
+  <div class = 'glorious-header'>
+    <h1>TestME</h1>
+      <h3>Protect your customers, Protect your business</h3>
+  </div>
+
+<div class = 'side-step'>
+  <h1 class="get-more">Do You Know?</h1>
+  <img src="{% static 'images/images2.jpg' %}" class="side-step-img"><br><br>
+  <h2>70% New Customers visiting a website for the first time are liable to get spoofed! Protect them today!</h2>
+</div>
+<div class="sign-up-login">
+  <h3><a href="/user_login/">Login into TestME</a></h3>
+  <form method = 'post'>
+    {% csrf_token %}
+    <div class = 'input-ver'>
+    Email<br>
+        {{ form.email }}<br><br>
+    </div>
+    <div class = 'input-ver'>
+    Username<br>
+        {{ form.username}}<br><br>
+    </div>
+    <div class = 'input-ver'>
+    Password<br>
+        {{ form.password1 }}<br><br>
+    </div>
+    <div class = 'input-ver'>
+    Confirm Password<br>
+        {{ form.password2 }}<br><br>
+    </div>
+    <div class="input-ver">
+        <button type = 'submit'>Sign Up</button>
+    </div>
+    </form>
+  <h4>Already have an account? <a href="/user_login/"> Login</a></h4>
+</div>
+
+<footer class="footer">
+  <h5>Get more out of life. Get started! Get active! Sign up today to get quality penetration testing services in for your websites/business and ensure your customers are free of spammers and scammers! So what are you waiting for? <a href="/signup/">Sign Up today!</a></h5>
+</footer>
+</body>
+<style>
+    .input-ver {
+    text-align: center;
+    }
+
+    .header-sign {
+    text-align: center;
+    }
+    .label {
+    margin-left: -60px;
+    }
+</style>
